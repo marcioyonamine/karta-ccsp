@@ -21,10 +21,7 @@ if ( 'chat' === get_post_format() ) {
 					<div class="post-box__categories">
 						<?php karta_categories(); ?>
 					</div>
-					<div class="post-box__intro" 
-					<?php if ( !has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-						echo 'style="margin-top:0px !important; "';
-					}  ?> >
+					<div class="post-box__intro" >
                     <?php
 
 ?>

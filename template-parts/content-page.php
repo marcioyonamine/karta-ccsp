@@ -15,11 +15,15 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="post-box">
-					<div class="post-box__intro">
+					<div class="post-box__intro" style="margin-top:0px !important;">
                     <?php
-echo do_shortcode( '[breadcrumb]' ); 
 ?>
-						<?php esc_html( the_title( '<h1 class="post-box__title">', '</h1>' ) ); ?>
+						<?php 
+						$title = get_the_title();
+						$bodytag = str_replace("Event Category:", "Programação : ", $title); //retira o Event Category
+						echo "<h1>$bodytag</h1>";
+						
+						 ?>
 					</div>
 					<?php if ( get_the_content() !== '' ) : ?>
 					<div class="post-box__content">

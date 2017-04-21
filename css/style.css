@@ -1630,9 +1630,9 @@ pre code {
 
 .row {
 
-  margin-left: -25px;
+  margin-left: -35px;
 
-  margin-right: -25px;
+  margin-right: -35px;
 
 }
 
@@ -7001,6 +7001,7 @@ position: absolute;
 .post-box {
 
   padding-top: 50px;
+  
 
 }
 
@@ -7016,7 +7017,7 @@ position: absolute;
 
 .post-box__categories {
 
-  margin: -10px;
+  /* margin: -20px; */
 
   background: #000;
 
@@ -7042,7 +7043,8 @@ position: absolute;
 
   margin: 0;
 
-margin-top: -180px;
+margin-top: 0px;
+
 
 }
 
@@ -7051,7 +7053,7 @@ margin-top: -180px;
 .has-post-thumbnail .post-box__intro {
 
   background: rgba(0, 0, 0, 1);
-
+margin-top: -180px;
 }
 
 
@@ -7158,7 +7160,7 @@ margin-top: -180px;
 
 .post-box__content p img {
 
-  max-width: calc(100% + 100px);
+  max-width: calc(100% - 10px);
 
   height: auto;
 
@@ -7212,7 +7214,7 @@ margin-top: -180px;
 
 .post-box__content iframe {
 
-  width: calc(100% + 100px) !important;
+  width: calc(100% - 10px) !important;
 
   margin-left: -50px !important;
 
@@ -7238,7 +7240,7 @@ margin-top: -180px;
 
 .post-box__content .wp-caption:not(.gallery-item) {
 
-  max-width: calc(100% + 100px);
+  max-width: calc(100% - 10px);
 
 }
 
@@ -8146,7 +8148,7 @@ table a {
 
 .single-format-audio .mejs-container {
 
-  width: calc(100% + 200px) !important;
+  width: calc(100% - 10px) !important;
 
   margin-left: -100px;
 
@@ -9508,7 +9510,7 @@ a + .rpwe-title:hover {
 
   .post-box__content p img {
 
-    max-width: calc(100% + 200px);
+    max-width: calc(100% - 10px);
 
   }
 
@@ -9532,7 +9534,7 @@ a + .rpwe-title:hover {
 
   .post-box__content iframe {
 
-    width: calc(100% + 200px) !important;
+    width: calc(100% - 10px) !important;
 
     margin-left: -10px !important;
 
@@ -9542,7 +9544,7 @@ a + .rpwe-title:hover {
 
   .post-box__content figure:not(.gallery-item) {
 
-    max-width: calc(100% + 200px);
+    max-width: calc(100% - 10px);
 
   }
 
@@ -10378,7 +10380,7 @@ a + .rpwe-title:hover {
 
   .main-navigation__menu > .current-menu-item > a {
 
-	color: #bd0000;
+	/* color: #bd0000; */
 
     border-bottom: 2px solid #bd0000;
 
@@ -11482,6 +11484,12 @@ a + .rpwe-title:hover {
     border-bottom: 1px solid #FFF !important; 
     text-decoration: none;
 
+}
+
+.menu_vermelho > .current-menu-item > a{
+	color: #FFF !important;	
+    border-bottom: 1px solid #FFF !important; 
+    text-decoration: none;
 }
 
 .site-info-ccsp{
