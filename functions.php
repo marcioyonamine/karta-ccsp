@@ -65,6 +65,7 @@ if ( ! function_exists( 'karta_setup' ) ) :
 		 */
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', 'karta' ),
+			
 		) );
 
 		/**
@@ -189,3 +190,23 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+// Otimização para o CCSP
+
+function widgets_novos_widgets_init() { //ccsp menu vermelho
+
+	register_sidebar( array(
+		'name' => 'Menu Vermelho',
+		'id' => 'red_menu_widgets',
+		'before_widget' => '<div class="collapse navbar-collapse menu_vermelho">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'widgets_novos_widgets_init' );
+
+if(function_exists('register_nav_menu')){
+	register_nav_menu('secundary','Menu Secundário');	
+}

@@ -55,5 +55,29 @@
 					</div>
 				</div>
 			</header><!-- #masthead -->
-
+            <?php //if ( dynamic_sidebar('red_menu_widgets') ) : else : endif; // ccsp - menu vermelho?>
+			<?php 
+$header_menu_args = array(
+	'theme_location'  => 'secundary',
+	'menu'            => '',
+	'container'       => 'nav',
+	'container_class' => 'menu_vermelho',
+	'container_id'    => '',
+	//'menu_class'      => 'main-navigation__menu',
+	'menu_class'      => 'main-navigation__menu',
+	'menu_id'         => '',
+	'echo'            => true,
+	'fallback_cb'     => 'wp_page_menu',
+	'before'          => '',
+	'after'           => '',
+	'link_before'     => '',
+	'link_after'      => '',
+	'items_wrap'      => '<ul id="%1$s" class="%2$s" >%3$s</ul>',
+	'depth'           => 0,
+	'walker'          => ''
+);
+ 
+wp_nav_menu( $header_menu_args );
+			
+			?>
 			<div id="content" class="site-content">
