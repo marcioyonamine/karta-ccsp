@@ -22,18 +22,22 @@
 			<?php endif; ?>
 		</div>
 
-		<div class="site-info-ccsp">
+		<!--<div class="site-info-ccsp">
 			<div class="container">
 				<div class="row">  
-					<div class="col-sm-6 col-xs-12">
+					<div class="col-sm-6 col-xs-12"> -->
+                    <div class="rodape_ccsp">
 						<p class="site-info__copyright"><?php echo esc_html( get_theme_mod( 'karta_sitecopyright', esc_html__( 'Copyright', 'karta' ) . ' &copy; ' . get_bloginfo( 'name' ) ) ); ?></p>
+                        <p>Rua Vergueiro 1000   -   CEP 01504-000   tel 3397 4002   -   Paraíso São Paulo - SP</p>
+						<p>ccsp@prefeitura.sp.gov.br</p>
 					</div>
+                    <!--</div>
                   
                    
 				</div>
 			</div> 
 		</div>
-        </div>
+        </div>-->
 	</footer>
 <!-- #page -->
 

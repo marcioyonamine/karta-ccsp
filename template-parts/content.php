@@ -41,18 +41,26 @@ if ( get_post_type( get_the_ID() ) != 'page' ) {
 
 			<?php 
 			$post_types = get_post_types( '', 'names' ); 
+		
+			
 			foreach ( $post_types as $post_type ) {
+
+				
 				if($post_type == 'event'){
 					?>
-                     <?php echo str_replace('<a','<a class="'.$class.'" ',get_the_term_list( get_the_ID(),'event-category', '', ', ', '' )); ?><?php //echo the_category('','',get_the_ID()) ?> 
-				<?php }
+                     <?php echo str_replace('<a','<a class="'.$class.'" ',get_the_term_list( get_the_ID(),'event-category', '', ', ', '' )); ?><?php //echo the_ID(); ?> 
+				<?php 
+					
+				}
 				if($post_type == 'post'){
 					?>
-                     <?php echo str_replace('<a','<a class="'.$class.'" ',get_the_term_list( get_the_ID(),'category', '', ', ', '' )); ?><?php //echo the_category('','',get_the_ID()) ?> 
-				<?php }
-			}
+                     <?php echo str_replace('<a','<a class="'.$class.'" ',get_the_term_list( get_the_ID(),'category', '', ', ', '' )); ?><?php //echo the_ID(); ?> 
+				<?php 
+					
+					}
+				}
 			
-			//karta_the_primary_category();
+			
 		
 			?>
 		<figcaption class="post__figcaption">
