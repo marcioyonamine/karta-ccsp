@@ -45,21 +45,37 @@ if ( get_post_type( get_the_ID() ) != 'page' ) {
 			
 			foreach ( $post_types as $post_type ) {
 
-				
+
+				/*
 				if($post_type == 'event'){
 					?>
-                     <?php echo str_replace('<a','<a class="'.$class.'" ',get_the_term_list( get_the_ID(),'event-category', '', ', ', '' )); ?><?php //echo the_ID(); ?> 
+                     <?php 
+					 $list_id = get_the_terms(get_the_ID(),'event-category', '', ', ', '' );
+					 $count = 0;
+					 foreach($list_id as $x){
+						if($count == 0 AND get_post_type( get_the_ID() ) == 'event'){ 
+							echo '<a class="'.$class.'" href="/site/eventos/categoria/'.$x->slug.'/" >'.$x->name.'</a>'; 
+					 	$count = 1;
+					 }
+					 
+					 }
+					 ?>
 				<?php 
 					
 				}
+				*/
 				if($post_type == 'post'){
 					?>
                      <?php echo str_replace('<a','<a class="'.$class.'" ',get_the_term_list( get_the_ID(),'category', '', ', ', '' )); ?><?php //echo the_ID(); ?> 
 				<?php 
 					
-					}
 				}
-			
+				elseif($post_type == 'event'){
+					$x = get_the_terms(get_the_ID(),'event-category', '', ', ', '' );
+						echo '<a class="'.$class.'" href="/site/eventos/categoria/'.$x[0]->slug.'/" >'.$x[0]->name.'</a>'; 
+				}
+			}
+				
 			
 		
 			?>

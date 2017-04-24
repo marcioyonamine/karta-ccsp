@@ -48,15 +48,26 @@ function karta_the_primary_category( $post_id = null ) {
 		$post_id = get_the_ID();
 	}
 
-	$primary_category = karta_get_primary_category( $post_id );
+	if ( 'post' === get_post_type( $post_id )){
+		$primary_category = karta_get_primary_category( $post_id );
+	}
+	elseif( 'event' === get_post_type( $post_id )){
+		$primary_category = karta_get_primary_event_category( $post_id );
+			$category_link = get_term_link( $category_id, 'event-category' );
+	}
 	$category_id = get_cat_id( $primary_category );
 	$category_link = get_term_link( $category_id, 'category' );
-
-	if ( ! empty( $primary_category ) ) :
+	$repeat = 0;
+	if ( ! empty( $primary_category )  AND $repeat == 0) {
+	
 ?>
-	<a href=<?php echo esc_url( $category_link )?> class="post__primary-category"><?php echo esc_html( $primary_category ) ?></a>
+	<!-- <a href=<?php echo esc_url( $category_link )?> class="post__primary-category"><?php echo esc_html( $primary_category ) ?> 123</a> -->
 <?php
-	endif;
+	$repeat = 1;
+	} else {
+	$repeat = 0;
+	}
+	
 }
 
 /**

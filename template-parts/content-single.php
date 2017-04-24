@@ -58,7 +58,7 @@ if ( 'chat' === get_post_format() ) {
 ?>
 
 <!--======== SHARE ARTICLE ========-->
-<?php karta_the_share_links(); ?>
+<?php //karta_the_share_links(); ?>
 
 <!--======== RELATED POSTS ========-->
 <?php karta_the_related_posts(); ?>

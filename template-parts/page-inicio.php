@@ -41,7 +41,7 @@ get_header(); ?>
 			
 			
 			$args = array(
-			'posts_per_page' => 21, 
+			'posts_per_page' => 24, 
 			'orderby' => 'modified', 
 			'order' => 'DESC',
 			'post_type' =>  array('post','event'), 

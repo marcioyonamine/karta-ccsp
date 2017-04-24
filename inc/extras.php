@@ -74,7 +74,7 @@ function karta_get_primary_category( $post_id = null ) {
 		$post_id = get_the_ID();
 	}
 
-	if ( 'post' === get_post_type( $post_id ) ) {
+	if ( 'post' === get_post_type( $post_id )) {
 		$categories = wp_cache_get( $post_id, 'karta_categories' );
 		if ( false === $categories ) {
 			$categories = wp_get_object_terms( $post_id, 'category', array( 'orderby' => 'none' ) );
@@ -87,6 +87,27 @@ function karta_get_primary_category( $post_id = null ) {
 
 	return false;
 }
+
+function karta_get_primary_event_category( $post_id = null ) {
+	if ( null === $post_id ) {
+		global $post;
+		$post_id = get_the_ID();
+	}
+
+	if ( 'event' === get_post_type( $post_id )) {
+		$categories = wp_cache_get( $post_id, 'karta_categories' );
+		if ( false === $categories ) {
+			$categories = wp_get_object_terms( $post_id, 'event-category', array( 'orderby' => 'none' ) );
+			wp_cache_set( $post_id, $categories, 'karta_categories' );
+		}
+
+		$primary_category = $categories[0]->name;
+		return $primary_category;
+	}
+
+	return false;
+}
+
 
 /**
  * Customized markup for submenu
