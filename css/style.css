@@ -8,23 +8,11 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-    width: 100%;
-    height: 100%;
     margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
 }
 
 body {
-  margin: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
+ 
 }
 
 article,
@@ -11500,3 +11488,16 @@ a + .rpwe-title:hover {
 	width: auto;	
 }	
 
+.biblioteca {
+background: #f8f8f8;
+padding: 100px;
+margin-left: -100px;
+margin-right: -100px;
+}
+
+.biblioteca-semcinza {
+
+padding: 100px;
+margin-left: -100px;
+margin-right: -100px;
+}
