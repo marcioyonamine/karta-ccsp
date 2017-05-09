@@ -64,6 +64,7 @@ template {
 
 a {
 
+  color: #F00;
   background-color: transparent;
 
 }
@@ -484,7 +485,7 @@ a:hover,
 
 a:focus {
 
-  color: #000000;
+  color: #FF0;
 
   text-decoration: underline;
 
@@ -5537,8 +5538,7 @@ a:focus {
 
   text-decoration: none;
 
-  color: inherit;
-
+  color: #bd0000; /* arrumar */
 }
 
 
@@ -11438,7 +11438,7 @@ a + .rpwe-title:hover {
     background: #bd0000;
     text-align: bottom;
 	text-align:center;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
 	font-family: 'Work Sans', sans-serif;
@@ -11469,9 +11469,22 @@ a + .rpwe-title:hover {
 }
 
 
-.menu_vermelho a:hover{
+.menu_vermelho a:hover
+{
 	color: #FFF !important;	
     border-bottom: 1px solid #FFF !important; 
+    text-decoration: none;
+
+}
+.menu_vermelho a
+{
+	color: #FFF !important;	
+    text-decoration: none;
+
+}
+.menu_vermelho a:focus,
+{
+	color: #FFF !important;	
     text-decoration: none;
 
 }
@@ -11483,6 +11496,8 @@ a + .rpwe-title:hover {
     border-bottom: 1px solid #FFF !important; 
     text-decoration: none;
 }
+
+
 
 .site-info-ccsp{
 	width: auto;	
@@ -11501,3 +11516,4 @@ padding: 100px;
 margin-left: -100px;
 margin-right: -100px;
 }
+

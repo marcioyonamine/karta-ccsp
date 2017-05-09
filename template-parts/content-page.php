@@ -8,6 +8,18 @@
  */
 
 ?>
+<?php
+if(trim(types_render_field("url-da-imagem")) != ""){
+ ?>
+<style>
+article{
+	background:url(<?php echo  types_render_field("url-da-imagem");?> );
+background-size: cover;
+	}
+</style>
+<?php
+}
+ ?>
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -39,3 +51,12 @@
 		</div>
 	</div>
 </article>
+
+<?php 
+//echo "<pre>";
+//var_dump(get_post());
+//echo "</pre>";
+
+
+?>
+
