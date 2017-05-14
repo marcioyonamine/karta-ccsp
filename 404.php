@@ -15,9 +15,9 @@ get_header(); ?>
 			<div class="container container--custom">
 				<div class="row">
 					<div class="col-xs-12">
-						<h1 class="not-found__title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'karta' ); ?></h1>
+						<h1 class="not-found__title"><?php esc_html_e( 'Página não encontrada.', 'karta' ); ?></h1>
 						<div class="not-found__content">
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'karta' ); ?></p>
+							<p><?php esc_html_e( 'Tente novamente ou utilize a busca.', 'karta' ); ?></p>
 							<div class="not-found__search-form">
 								<?php get_search_form(); ?>
 							</div>

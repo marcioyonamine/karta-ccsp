@@ -15,7 +15,14 @@ get_header(); ?>
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<?php the_archive_title( '<h5 class="archive-intro__title">', '</h5>' ); ?>
+						<h1 class="archive-intro__title">
+						<?php 
+							$novafrase = str_replace(array("Categoria:"), "" ,get_the_archive_title());	
+							echo $novafrase;
+					 ?>
+                        </h1>
+						
+						
 						<?php the_archive_description( '<div class="archive-intro__description">', '</div>' ); ?>
 					</div>
 				</div>

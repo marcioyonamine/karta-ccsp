@@ -5820,8 +5820,8 @@ textarea {
 
 
 .content-area {
-
-  padding-bottom: 80px;
+	/* padding-top: 30px; */
+  /* padding-bottom: 80px; */
 
 }
 
@@ -6875,11 +6875,11 @@ position: absolute;
 
   color: #FFF ;
 
-  background: #bd0000;
+  background:#000;
 
   text-align: bottom;
 
-	margin-top: 10px; 
+	margin-top: 0px; 
 
 	padding-top: 10px;
 
@@ -6895,7 +6895,7 @@ position: absolute;
 
 .archive-intro__title {
 
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 
 }
 
@@ -8648,7 +8648,7 @@ a + .rpwe-title:hover {
 
 
   .container {
-
+padding-top: 30px;
     width: 750px;
 
   }
@@ -11452,7 +11452,7 @@ a + .rpwe-title:hover {
     background: #000;
     text-align: bottom;
 	text-align:center;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     padding-top: 10px;
     padding-bottom: 10px;
 	font-family: 'Work Sans', sans-serif;
@@ -11506,14 +11506,21 @@ a + .rpwe-title:hover {
 .biblioteca {
 background: #f8f8f8;
 padding: 100px;
+padding-left: 100px;
+padding-right: 100px;
 margin-left: -100px;
 margin-right: -100px;
 }
 
 .biblioteca-semcinza {
 
-padding: 100px;
+padding-left: 100px;
+padding-right: 100px;
 margin-left: -100px;
 margin-right: -100px;
+}
+
+.site-footer-widget__title {
+	color:#000 !important;	
 }
 

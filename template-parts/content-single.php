@@ -18,9 +18,9 @@ if ( 'chat' === get_post_format() ) {
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="post-box">
-					<div class="post-box__categories">
+					<!--<div class="post-box__categories">
 						<?php karta_categories(); ?>
-					</div>
+					</div>-->
 					<div class="post-box__intro" >
                     <?php
 
@@ -29,7 +29,7 @@ if ( 'chat' === get_post_format() ) {
 						<?php if ( 'aside' !== get_post_format() ) : ?>
 							<h1 class="post-box__title"><?php esc_html( the_title() ); ?></h1>
 						<?php endif; ?>
-						<?php if ( has_tag() ) : ?><p class="post-box__tags"><?php esc_html( the_tags() ); ?></p><?php endif; ?>
+						<!-- <?php if ( has_tag() ) : ?><p class="post-box__tags"><?php esc_html( the_tags() ); ?></p><?php endif; ?> -->
 					</div>
 					<?php
 					if ( get_the_content() !== '' ) : ?>
@@ -37,8 +37,10 @@ if ( 'chat' === get_post_format() ) {
 						<?php
 						wp_link_pages(); 
 						the_content();
-						the_post_navigation();
 						
+						if ( has_tag() ) : ?><p class="post-box__tags"><?php esc_html( the_tags() ); ?></p><?php endif; 
+						
+						the_post_navigation();
 						
 
 						?>
